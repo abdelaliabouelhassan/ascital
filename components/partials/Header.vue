@@ -7,8 +7,8 @@
                 </RouterLink>
             </div>
 
-            <div class=" flex items-center space-x-10">
-                <div class=" flex items-center space-x-8">
+            <div class="  items-center space-x-10 hidden lg:flex">
+                <div class=" flex items-center space-x-4 xl:space-x-8">
                      <RouterLink to="/" class=" text-white font-inter text-2xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
                            Home
                      </RouterLink>
@@ -38,6 +38,15 @@
                         </svg>
                     </a>
                 </div>
+            </div>
+            <div class=" lg:hidden">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="32" viewBox="0 0 42 32" fill="none">
+                        <rect width="42" height="6" fill="white"/>
+                        <rect y="13" width="42" height="6" fill="white"/>
+                        <rect y="26" width="42" height="6" fill="white"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>

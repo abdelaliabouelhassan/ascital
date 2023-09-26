@@ -1,16 +1,16 @@
 <template>
-    <div class=" w-full h-screen bg-black relative">
+    <div class=" w-full h-screen bg-black relative overflow-hidden">
         <!-- Video -->
 
 
         <!-- text -->
-        <div class=" absolute left-10 bottom-20 max-w-[59.375rem] w-full">
+        <div class=" absolute sm:left-10 left-4 bottom-10 sm:bottom-20 max-w-[59.375rem] w-full ">
             <div class=" w-full flex flex-col items-start space-y-8">
-                <div class=" text-white text-7xl font-bold tracking-[-0.225rem] leading-[98.005%] relative">
+                <div class=" text-white xl:text-7xl text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.225rem] leading-[98.005%] relative">
                    <p>
-                     Una realtà solida, composta da specialisti in 
+                     Una realtà solida, composta <br class=" lg:hidden"> da specialisti in 
                    </p>
-                    <div class=" overflow-hidden absolute top-[4.4rem] -right-24  max-w-[34.875rem] h-20  w-full">
+                    <div class=" overflow-hidden sm:absolute  lg:top-[3.9rem] xl:top-[4.4rem] top-[2.6rem] -right-[14rem] md:top-[3.1rem] md:-right-[20rem] lg:right-16 xl:-right-24  max-w-[34.875rem] h-[3rem] md:h-[4rem] lg:h-[4.6rem] xl:h-20  w-full">
                     <transition name="hero-subtext">
                         <div v-if="index == 0">
                             <span  class="text-verde-ascital">Servizi IT</span>
@@ -27,8 +27,8 @@
                     </transition>
                     </div>
                 </div>
-                <div class=" w-full h-[0.0625rem] bg-white max-w-[54.375rem]"></div>
-                <p class=" text-white text-xl font-normal">
+                <div class=" w-full h-[0.0625rem] bg-white max-w-[35rem] lg:max-w-[54.375rem] hidden sm:block"></div>
+                <p class=" text-white text-xl font-normal hidden sm:block">
                     Siamo una società che comprende 14 PMI nei settori dell’ ICT, <br> della sicurezza globale, degli impianti tecnologici e dei sistemi <br> evoluti di automazione industriale.
                 </p>
             </div>
