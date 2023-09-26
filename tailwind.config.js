@@ -14,7 +14,9 @@ export default {
         'inter':['Inter','sans-serif']
       },
       colors:{
-        'verde-ascital':'#CFD61C'
+        'verde-ascital':'#CFD61C',
+        'blu-ascital':'#273C7B',
+        'testi':'#373D3F'
       }
     },
   },
