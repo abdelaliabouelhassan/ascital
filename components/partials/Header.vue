@@ -1,9 +1,9 @@
 <template>
     <div class=" w-full max-w-[86rem] mx-auto ">
         <div class=" w-full flex items-center justify-between">
-            <div class=" max-w-[15rem]">
+            <div class=" max-w-[12.6875rem] sm:max-w-[15rem]">
                 <RouterLink to="/">
-                    <img src="/assets/logo.svg" alt="svg" class=" w-full h-full object-cover">
+                    <img src="/assets/logo.svg" alt="svg" class="w-full h-full object-cover">
                 </RouterLink>
             </div>
 
