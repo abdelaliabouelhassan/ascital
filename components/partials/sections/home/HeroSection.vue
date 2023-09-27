@@ -42,7 +42,6 @@
  const index = ref(0);
  const videosrc = ref('/assets/home/herovideo.mov')
  onMounted(() => {
-    loaded.value = true
     setInterval(()=> {
         index.value++
         if(index.value == 3){
