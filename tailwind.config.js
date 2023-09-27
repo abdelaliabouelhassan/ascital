@@ -16,7 +16,8 @@ export default {
       colors:{
         'verde-ascital':'#CFD61C',
         'blu-ascital':'#273C7B',
-        'testi':'#373D3F'
+        'testi':'#373D3F',
+        'keycolor_2':'#5A6A79'
       }
     },
   },
