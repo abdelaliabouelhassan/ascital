@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full relative py-10 lg:pl-8 lg:pr-20 pl-4 pr-4 space-y-10 md:space-y-16 ">
+    <div class=" w-full relative py-20 lg:pl-8 lg:pr-20 pl-4 pr-4 space-y-10 md:space-y-16 ">
       <p class=" text-blu-ascital font-normal text-[2rem] md:text-[3rem] lg:text-[3.375rem] leading-[1.2] max-w-[63.8125rem]">
         Offriamo soluzioni complete, <br>
         con un reale  <span class=" text-verde-ascital">vantaggio competitivo</span>.
