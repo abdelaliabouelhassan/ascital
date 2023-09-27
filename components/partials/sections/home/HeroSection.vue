@@ -2,7 +2,7 @@
     <div class=" w-full h-screen bg-black relative overflow-hidden">
         <!-- Video -->
 
-         <video autoplay muted src="/assets/home/ascitalHero.mov" class=" object-cover w-full h-full"></video>
+         <video autoplay muted src="/assets/home/ascital-hero.mov" class=" object-cover w-full h-full"></video>
 
         <!-- text -->
         <div class=" absolute sm:left-10 left-4 bottom-10 sm:bottom-20 max-w-[59.375rem] w-full ">
