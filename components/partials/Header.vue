@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full max-w-[86rem] mx-auto ">
+    <div class=" w-full max-w-[86rem] mx-auto relative">
         <div class=" w-full flex items-center justify-between">
             <div class=" max-w-[12.6875rem] sm:max-w-[15rem]">
                 <RouterLink to="/">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class=" lg:hidden">
-                <button>
+                <button @click="open = !open">
                     <svg xmlns="http://www.w3.org/2000/svg" width="42" height="32" viewBox="0 0 42 32" fill="none">
                         <rect width="42" height="6" fill="white"/>
                         <rect y="13" width="42" height="6" fill="white"/>
@@ -49,5 +49,43 @@
                 </button>
             </div>
         </div>
+
+         <div class="flex items-center lg:order-2 md:hidden z-50 relative ">
+                <aside id="default-sidebar" :class="{'translate-x-0':open,'-translate-x-full rtl:translate-x-full':!open}" class="fixed bg-black bg-opacity-75 py-4 bg-primary top-0 left-0 rtl:right-0 z-40 w-full h-screen transition-transform  " aria-label="Sidebar">
+                   <button class=" absolute top-4 right-4" @click="open = false" >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white hover:text-black duration-300 ">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+
+                   </button>
+                    <div class="h-full  overflow-y-auto px-4  space-y-8 z-50    ">
+                        <div class="  items-start flex-col space-y-4 lg:space-x-5  flex w-full ">
+                       
+                            <NuxtLink  to="/"   @click="open = false"   class=" text-white font-inter text-xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
+                                    Home
+                            </NuxtLink>
+                            <NuxtLink  to="/"     @click="open = false"  class=" text-white font-inter text-xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
+                                    Chi siamo
+                            </NuxtLink>
+                            <NuxtLink  to="/"     @click="open = false"  class=" text-white font-inter text-xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
+                                    Cosa facciamo
+                            </NuxtLink>
+                            <NuxtLink  to="/"     @click="open = false"  class=" text-white font-inter text-xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
+                                    Clienti
+                            </NuxtLink>
+                            <NuxtLink  to="/"     @click="open = false"  class=" text-white font-inter text-xl font-normal hover:text-gray-100 hover:text-opacity-60 duration-200">
+                                    Contatti
+                            </NuxtLink>
+                        
+                        </div>
+                    </div>
+                </aside>
+                
+         </div>
     </div>
 </template>
+
+
+<script setup>
+ const open = ref(true)
+</script>
