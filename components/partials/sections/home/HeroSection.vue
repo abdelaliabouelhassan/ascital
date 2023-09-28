@@ -2,7 +2,7 @@
     <div class=" w-full h-screen bg-black relative overflow-hidden">
         <!-- Video -->
 
-         <video  autoplay muted :src="videosrc" class=" object-cover w-full h-full"></video>
+         <video  autoplay loop  muted :src="videosrc" ref="video" class=" object-cover w-full h-full"></video>
 
         <!-- text -->
         <div class=" absolute sm:left-10 left-4 bottom-10 sm:bottom-20 max-w-[59.375rem] w-full ">
@@ -41,13 +41,38 @@
 <script setup>
  const index = ref(0);
  const videosrc = ref('/assets/home/herovideo.mov')
+ const video = ref(null);
+let videoCurrentTime = 0;
+const onVideoTimeUpdate = () => {
+      const currentTime = video.value.currentTime;
+
+      // Update the global variable with the current video time
+      videoCurrentTime = currentTime;
+      if (currentTime >= 0 && currentTime <= 4.9) { 
+        index.value = 0
+      } else if (currentTime >= 4.9 &&  currentTime <= 9.5) {
+        index.value = 1
+      }
+      else if (currentTime >= 9 && currentTime <= 14.5) {
+        index.value = 2
+      }else {
+        index.value = 3
+      }
+};
  onMounted(() => {
-    setInterval(()=> {
-        index.value++
-        if(index.value == 3){
-            index.value = 0
-        }
-    },3000);
+
+
+    
+
+      video.value.currentTime = videoCurrentTime;
+
+      video.value.addEventListener('timeupdate', onVideoTimeUpdate)
+    
+
+ })
+
+ onBeforeUnmount(() => {
+     video.value.removeEventListener('timeupdate', onVideoTimeUpdate);
  })
 </script>
 
