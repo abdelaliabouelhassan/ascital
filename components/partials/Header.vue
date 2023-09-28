@@ -87,5 +87,5 @@
 
 
 <script setup>
- const open = ref(true)
+ const open = ref(false)
 </script>
